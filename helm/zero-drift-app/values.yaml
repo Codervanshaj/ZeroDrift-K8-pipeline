@@ -1,7 +1,7 @@
 image:
   repository: vanshajagarwal/zero-drift-app   
   pullPolicy: IfNotPresent
-  tag: "af67f08"
+  tag: "29fc007"
 
 replicaCount: 2
 

@@ -1,5 +1,5 @@
 image:
-  repository: vanshajagarwal/zero-drift-deployment   
+  repository: vanshajagarwal/zero-drift-app   
   pullPolicy: IfNotPresent
   tag: "latest"
 

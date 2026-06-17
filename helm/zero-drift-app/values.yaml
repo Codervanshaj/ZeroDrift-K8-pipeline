@@ -1,20 +1,17 @@
-# ── Image ─────────────────────────────────────────────────────────────────────
 image:
-  repository: your-dockerhub-username/zero-drift-app   # CHANGE: your Docker Hub username
+  repository: vanshajagarwal/zero-drift-deployment   
   pullPolicy: IfNotPresent
-  # GitHub Actions CI will automatically update this tag on every commit
   tag: "latest"
 
-# ── Replica count ─────────────────────────────────────────────────────────────
 replicaCount: 2
 
-# ── Service ───────────────────────────────────────────────────────────────────
+# Service
 service:
   type: ClusterIP
   port: 80
   targetPort: 3000
 
-# ── Resource limits ───────────────────────────────────────────────────────────
+# Resource limits
 resources:
   requests:
     cpu: "100m"
@@ -23,11 +20,11 @@ resources:
     cpu: "250m"
     memory: "256Mi"
 
-# ── Environment variables passed to the container ────────────────────────────
+# Environment variables passed to the container
 env:
   APP_VERSION: "v1.0.0"
 
-# ── Liveness / Readiness probes ───────────────────────────────────────────────
+# Liveness / Readiness probes 
 livenessProbe:
   httpGet:
     path: /

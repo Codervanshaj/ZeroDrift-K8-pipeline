@@ -9,18 +9,18 @@ metadata:
 spec:
   project: default
 
-  # ── Source: Git repo containing the Helm chart ────────────────────────────
+  # Source: Git repo containing the Helm chart 
   source:
-    repoURL: https://github.com/YOUR_GITHUB_USERNAME/zero-drift-deployment  # CHANGE
+    repoURL: https://github.com/Codervanshaj/ZeroDrift-K8-Pipeline.git 
     targetRevision: main
     path: helm/zero-drift-app
 
-  # ── Destination: Kubernetes cluster & namespace ────────────────────────────
+  # Destination: Kubernetes cluster & namespace 
   destination:
     server: https://kubernetes.default.svc
     namespace: zero-drift
 
-  # ── Sync policy: auto-sync = zero-drift guarantee ─────────────────────────
+  # Sync policy: auto-sync = zero-drift guarantee
   syncPolicy:
     automated:
       prune: true       # Remove resources deleted from Git

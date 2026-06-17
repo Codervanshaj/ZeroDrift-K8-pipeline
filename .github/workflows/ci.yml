@@ -1,4 +1,4 @@
-name: CI – Build, Tag & Push Docker Image
+name: CI Build, Tag & Push Docker Image
 
 # Trigger on every push to main branch
 on:

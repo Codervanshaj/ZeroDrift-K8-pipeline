@@ -14,7 +14,6 @@ terraform {
   }
 }
 
-# ── Kubernetes provider ───────────────────────────────────────────────────────
 # Reads credentials from the local kubeconfig file (~/.kube/config).
 # Change context_name to match your cluster context.
 provider "kubernetes" {
@@ -22,7 +21,7 @@ provider "kubernetes" {
   config_context = var.kube_context
 }
 
-# ── Helm provider (shares same credentials) ───────────────────────────────────
+# Helm provider (shares same credentials)
 provider "helm" {
   kubernetes {
     config_path    = "~/.kube/config"
